@@ -1,0 +1,11 @@
+name: Integration Test PR
+on: 
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-24.04-x86_64
+    steps:
+      - name: Test Echo
+        run: echo "Integration Test PR Run on Runner" 
